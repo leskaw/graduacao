@@ -1,16 +1,16 @@
 import express from 'express';
 import { instituicao, nomeCurso } from '../data.js';
 
-const app = express();
+const home = express();
 
-app.use(express.json());
+home.use(express.json());
 
-app.get('/instituicao', (req, res) => {
+home.get('/instituicao', (req, res) => {
   res.json(instituicao);
 });
 
-app.get('/nome_curso', (req, res) => {
+home.get('/nome_curso', (req, res) => {
   res.json(nomeCurso);
 });
 
-export default app;
+export default home;
